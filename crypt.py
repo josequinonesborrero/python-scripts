@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-# This script is ment to be used as a single source to process strings and files
-# using diffrents types of hashing, encoding and ecrypting algorythms.
+# This script is meant to be used as a single source to process strings and files
+# using different types of hashing, encoding and ecrypting algorythms.
 # Coded by: Jose L Quinones (python n00b)
 # Version: 0.2
 # Changes: Added rot13 and hex support
@@ -16,7 +16,7 @@ content = ''
 
 def print_usage():
     print ''
-    print 'Usage: crypt.py [operationtype] [argument] [sourcetype] [argument] [extras]'
+    print 'Usage: crypt.py [operation type] [argument] [source type] [argument] [extras]'
     print ''
     print ' --hash      	: hash [md5, sha1, sha256, sha512]'
     print ' --encode    	: encoding [base64, hex, rot13]'
