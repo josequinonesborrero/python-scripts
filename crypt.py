@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
 # This script is meant to be used as a single source to process strings and files
-# using different types of hashing, encoding and ecrypting algorythms.
-# Coded by: Jose L Quinones (python n00b)
+# using different types of hashing, encoding and encrypting algorithms.
+# Coded by: Jose L Quiñones (python n00b)
 # Version: 0.2
 # Changes: Added rot13 and hex support
 # Pending: Add encryption and cracking capabilities, fix file processing
@@ -23,7 +23,7 @@ def print_usage():
     print ' --decode    	: encoding [base64, hex, rot13]'
     # print ' --crypt	: encryption [aes256]'
     # print ' --decrypt	: encryption [aes256]'
-    # print ' --crack	: encryption or hashing [md5, sha1,sha256, sha512, aes256]'
+    #ñ print ' --crack	: encryption or hashing [md5, sha1,sha256, sha512, aes256]'
     print ' --string    	: "string"'
     print ' --file      	: file'
     print ' --help      	: print this help'
@@ -32,7 +32,7 @@ def print_usage():
     print ''
     print 'Example:  crypt.py --hash md5 --string my_password'
     print 'Example:  crypt.py --encode base64 --string secret'
-    print 'Example:  crypt.py --crypt aes256 --string secret --key password'
+    #print 'Example:  crypt.py --crypt aes256 --string secret --key password'
     sys.exit(1)
     
 def import_f():
@@ -98,7 +98,7 @@ def rot13_decode():
     print '------ Start of rot13 decoded string below ------ '
     print decoded
 	
-def hashing_funcs():					# cycle truh hashing algorythms and hash
+def hashing_funcs():					# cycle thru hashing algorithms and hash
         if str(sys.argv[2]) == 'md5':
             md5_hash()
         if str(sys.argv[2]) == 'sha1':
@@ -108,7 +108,7 @@ def hashing_funcs():					# cycle truh hashing algorythms and hash
         if str(sys.argv[2]) == 'sha512':
             sha512_hash()
 
-def encoding_funcs():					# cycle truh encoding options and encode
+def encoding_funcs():					# cycle thru encoding options and encode
         if str(sys.argv[2]) == 'base64':
             base64_encode()
         if str(sys.argv[2]) == 'hex':
