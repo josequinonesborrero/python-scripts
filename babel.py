@@ -2,9 +2,8 @@
 
 # This script is meant to be used as a single source to process strings and files
 # using different types of hashing, encoding and encrypting algorithms.
-# Coded by: Jose L Quiñones (python n00b)
-# Version: 0.2
-# Changes: Added rot13 and hex support
+# Coded by: JQ
+# Version: 0.1
 # Pending: Add encryption and cracking capabilities, fix file processing
 
 import hashlib, base64, sys
@@ -16,22 +15,22 @@ content = ''
 
 def print_usage():
     print ''
-    print 'Usage: crypt.py [operation type] [argument] [source type] [argument] [extras]'
+    print 'Usage: babel.py [operation type] [argument] [source type] [argument] [extras]'
     print ''
     print ' --hash      	: hash [md5, sha1, sha256, sha512]'
     print ' --encode    	: encoding [base64, hex, rot13]'
     print ' --decode    	: encoding [base64, hex, rot13]'
-    # print ' --crypt	: encryption [aes256]'
-    # print ' --decrypt	: encryption [aes256]'
-    #ñ print ' --crack	: encryption or hashing [md5, sha1,sha256, sha512, aes256]'
+    #print ' --crypt	: encryption [aes256]'
+    #print ' --decrypt	: encryption [aes256]'
+    #print ' --crack	: encryption or hashing [md5, sha1,sha256, sha512, aes256]'
     print ' --string    	: "string"'
     print ' --file      	: file'
     print ' --help      	: print this help'
     print ''
     print '[argument] = string or file to be hashed'
     print ''
-    print 'Example:  crypt.py --hash md5 --string my_password'
-    print 'Example:  crypt.py --encode base64 --string secret'
+    print 'Example:  babel.py --hash md5 --string my_password'
+    print 'Example:  babel.py --encode base64 --string secret'
     #print 'Example:  crypt.py --crypt aes256 --string secret --key password'
     sys.exit(1)
     
@@ -141,8 +140,9 @@ if str(sys.argv[1]) == '--encode':			# start of encoding routine
             ascii2hex()
         if str(sys.argv[2]) == 'rot13':
             rot13_encode()
+
     if str(sys.argv[3]) == '--file':
-        import_f()
+        content = import_f()
         txt_string = content
         if str(sys.argv[2]) == 'base64':
             base64_decode()
